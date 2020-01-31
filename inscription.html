@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Garisart - Inscription</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header>
+    <nav>
+        <span><a href="index.html" title="Garisart Accueil"><img id="logo-nav" src="images/logo-garisart.png" alt="logo garisart"></a></span>
+        <ul>
+            <a href="index.html">
+                <li>Accueil</li>
+            </a>
+            <a href="sports.html">
+                <li>Nos sports</li>
+            </a>
+            <a href="inscription.html">
+                <li class="currentPage">Inscription 2019-2020</li>
+            </a>
+            <a href="contact.html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+
+<main id="neige">
+    <div class="container" id="formContainer">
+
+        <h2 id="inscriptionFormTitle">Inscription</h1>
+
+            <form id="inscription" method="POST" onsubmit="return inscriptionFunc(inscription)">
+                <label for="BadTen" id="ob">Choix du sport</label>
+                <section>
+				
+                    <div class="flexFormNoOb" style="float:left;margin-right:20px;">
+						
+                        <label for="Sport 1">Badminton</label>
+                        <input type="radio" name="BadTen" id="badmintonChoice" class="infoSport" value="badminton" required>
+                    </div>
+
+                    <div class="flexFormNoOb" style="float:left;">
+                        <label for="Sport 2">Tennis </label>
+                        <input type="radio" name="BadTen" id="tennisChoice" class="infoSport" value="tennis" required>
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="text" name="nom" id="familyName" placeholder="Nom" required>
+
+                    </div>
+
+                    <div class="flexForm" style="float:left;">
+                        <input type="text" name="prenom" id="givenName" placeholder="Prénom" required>
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                        <div class="flexForm" style="float:left;margin-right:20px;">
+                                <input name="date" type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date de naissance" id="naissance">
+                        </div>
+                        <br style="clear:both;" />
+                    </section>
+
+                
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+
+                    </div>
+
+                    <div class="flexFormNoOb" style="float:left;">
+                        <input type="tel" name="telephone" id="phone" placeholder="Téléphone">
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="text" name="street" id="street" placeholder="Rue et numéro">
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="number" name="postal" id="postal" placeholder="Code postal" minlength="4" maxlength="7">
+
+                    </div>
+
+                    <div class="flexForm" style="float:left;">
+                        <input type="text" name="ville" id="city" placeholder="Ville">
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <select id="country">
+                            <option value="Allemagne">Allemagne</option>
+                            <option value="Belgique" selected>Belgique</option>
+                            <option value="France">France</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Pays-Bas">Pays-Bas</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                        <input type="submit" value="Envoyer" id="submit">
+                    </section>
+                    <section>
+                        <input type="reset" value="Réinitialiser">
+                    </section>
+                    <p class="obligatoire">Tous les champs marqués * sont obligatoires</p>
+
+            </form>
+
+            <button onclick="goToTop()" id="topButton" title="Aller en haut de page">&#10148;</button>
+    </div>
+</main>
+
+<footer>
+    <script src="js/main.js"></script>
+    <p>© 2019 Mathieu François - Srinjoy Sanyal</p>
+    <button onclick="flocons()" title="Il neige">Let it snow</button>
+</footer>
+
+
+</html>

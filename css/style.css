@@ -1,0 +1,556 @@
+/* Mathieu François - Srinjoy Sanyal 5C */
+
+/* ===================================
+		Reset css
+==================================== */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0; 
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ===================================
+		Open Sans
+==================================== */
+
+/* cyrillic-ext */
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');
+	unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');
+	unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+/* ===================================
+		General
+==================================== */
+* {
+	box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+  	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+p,
+ul li,
+ol li {
+	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ===================================
+		Navigation bar
+==================================== */
+nav {
+	background-color: rgb(0, 0, 0);
+	display: flex;
+	flex-flow: row nowrap;
+	height: 100px;
+  	top: 0;
+  	position: fixed;
+	width: 100%;
+  	/*border-bottom: 5px solid #9C140E;*/
+}
+
+nav span {
+	height: 100%;
+	font-size: 40px;
+	line-height: 100px;
+	padding-left: 5px;
+	width: 60%;
+}
+
+nav ul {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	height: 100%;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	width: 70%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav ul a {
+	height: 100%;
+	line-height: 100px;
+    width: 25%;
+    
+}
+
+nav ul a:hover li {
+	background-color: #f2f2f2;
+    color: #9C140E;
+}
+
+.currentPage {
+	background-color: #f2f2f2;
+	color: #9C140E;
+}
+
+nav ul li {
+	color: rgb(255, 255, 255);
+	font-size: 1.2vw;
+	list-style: none;
+	text-align: center;
+}
+
+
+/* ===================================
+		Main
+==================================== */
+body {
+	position: relative;
+  	min-height: 100vh;
+}
+
+main {
+	margin-top: 130px;
+	padding-bottom: 2.5rem;
+}
+  
+.container {
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2.5em;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+p {
+	line-height: 29px;
+}
+
+/* ===================================
+		Index
+==================================== */
+
+.inlineFlex {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.imageForText {
+	width: 100%;
+}
+
+.leftImage {
+	width: 50%;
+	background-color: #8c8c8c;
+}
+
+.leftText {
+	width: 50%;
+	background-color: #9C140E;
+	padding: 50px;
+	color: white;
+}
+
+.rightText {
+	background-color: #9C140E;
+	flex: 1;
+	float: right;
+	padding: 50px;
+	color: white;
+}
+
+.rightImage {
+	background-color: #8c8c8c;
+	flex: 1;
+	float: right;
+	
+}
+
+.leftImage, .rightImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* ===================================
+		Page nos sports
+==================================== */
+
+#tennisDivLink {
+	filter: gray;
+	-webkit-filter: grayscale(1);
+}
+
+#tennisDivLink:hover {
+	filter: none;
+	-webkit-filter: grayscale(0);
+}
+
+/* ===================================
+		Page Tennis
+==================================== */
+
+#textPage {
+	width: 70%;
+}
+
+/* ===================================
+		Page Badminton
+==================================== */
+
+.flex
+{
+	border-collapse: collapse;
+}
+
+
+th
+{
+	border: 3px purple solid;
+}
+
+
+td
+{
+	border: 3px purple solid;
+}
+
+#img
+{
+	left: 100px;
+}
+
+
+a:link
+{
+	color: blue;
+}
+
+a:visited
+{
+	color: purple;
+}
+
+
+a:hover
+{
+	color: green;
+}
+
+
+/* ===================================
+		Formulaires
+==================================== */
+
+
+#contactFormTitle, #inscriptionFormTitle {
+	margin-bottom: 50px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"] {
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: none;
+	background-color: #f1f0f0;
+	padding: 6px 42.5px 6px 12px;
+	height: 40px;
+	margin-right: 2px;
+	width: 210px;
+
+}  
+
+input:focus {
+	border: 3px solid;
+	border-radius: 4px;
+	border-image: linear-gradient(to right, #CC231E 0%, #F5624D 33%, #34A65F 66%, #0F8A5F 100%);
+	border-image-slice: 1;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#formContainer {
+	width: 650px;
+	max-width: 70%;
+	background-color: lightgray;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+
+}
+
+.formLink {
+	color: rgb(150, 150, 150);
+}
+
+.formLink:hover {
+	color: rgb(100, 100, 100);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#message {
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: none;
+	background-color: #f1f0f0;
+	padding: 15px 42.5px 6px 15px;
+	width: 471px;
+	margin-right: 2px;
+	resize: none;
+}
+
+.flexForm, .flexFormNoOb {
+	display: flex;
+	flex-flow: row nowrap;
+	border-radius: 10px;
+	
+}
+
+.flexForm:after, #ob:after { 
+	content:"    *";
+	color: red; 
+	margin-right: 20px;
+}
+
+.obligatoire {
+	text-align: center;
+	font-size: 10px;
+}
+
+.infoSport {
+	margin-left: 10px;
+	
+}
+
+#submit {
+	border: none;
+	background-color: #9C140E;
+	height: 34px;
+	width: 200px;
+	border-radius: 4px;
+	color: white;
+}
+
+#submit:hover {
+	background-color: rgba(156, 21, 14, 0.8);
+	cursor: pointer;
+}
+/* ===================================
+		Footer
+==================================== */
+
+footer {
+	background-color: none;
+	bottom: 0;
+	position: absolute;
+  	width: 100%;
+	height: 2.5rem;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+
+/* ===================================
+		Top Button
+==================================== */
+
+#topButton {
+	display: none; /* Caché par défaut */
+	bottom: 20px; 
+	right: 30px; /* 30 px a droite */
+	position: fixed; 
+	border: none; /* enleve les bordures */
+	outline: none; /* enleve l'outline */
+	color: white; 
+	padding: 15px; 
+	border-radius: 10px; /* arrondi les bords */
+	font-size: 18px; 
+	background-color: #9C140E; 
+	transform: rotate(-90deg); /* met la flèche dans le bon sens */
+	cursor: pointer; /* petite main comme souris */
+}
+  
+#topButton:hover {
+	background-color: #555;
+}
+
+
+/* ===================================
+		Flocons
+==================================== */
+
+.snowflake {
+	color: #fff;
+	font-size: 1em;
+	font-family: Arial, sans-serif;
+	text-shadow: 0 0 5px #000;
+}
+  
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);
+transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;
+	top:-10%;
+	z-index:9999;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	cursor:default;
+	-webkit-animation-name:snowflakes-fall,snowflakes-shake;
+	-webkit-animation-duration:10s,3s;
+	-webkit-animation-timing-function:linear,ease-in-out;
+	-webkit-animation-iteration-count:infinite,infinite;
+	-webkit-animation-play-state:running,running;
+	animation-name:snowflakes-fall,snowflakes-shake;
+	animation-duration:10s,3s;
+	animation-timing-function:linear,ease-in-out;
+	animation-iteration-count:infinite,infinite;
+	animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;
+	-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;
+	-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;
+	-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;
+	-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;
+	-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;
+	-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;
+	-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;
+	-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;
+	-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;
+	-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;
+	-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;
+	-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}

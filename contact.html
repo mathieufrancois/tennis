@@ -1,0 +1,108 @@
+<!-- Mathieu François - Srinjoy Sanyal 5C -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Garisart - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span><a href="index.html" title="Garisart Accueil"><img id="logo-nav" src="images/logo-garisart.png"
+                        alt="logo garisart"></a></span>
+            <ul>
+                <a href="index.html">
+                    <li>Accueil</li>
+                </a>
+
+                <a href="sports.html">
+                    <li>Nos sports</li>
+                </a>
+
+                <a href="inscription.html">
+                    <li>Inscription 2019-2020</li>
+                </a>
+                <a href="contact.html">
+                    <li class="currentPage">Contact</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="neige">
+        <div class="container" id="formContainer">
+
+            <h2 id="contactFormTitle">Nous contacter</h2>
+
+            <p>Numéro de téléphone : </p>
+            <a href="tel:+352661159404" class="formLink">+352 661 159 404</a>
+            <br><br>
+            <p>Email : </p>
+            <a href="mailto:mathieufrancois@outlook.com?subject=Contact"
+                class="formLink">mathieufrancois@outlook.com</a><br><br>
+
+            <a href="https://www.facebook.com/TennisClubGarisart" target="_blank">Notre page
+                facebook</a><br><br>
+
+
+            <p>Ou envoyez-nous un message</p>
+
+            <form id="contactForm" onsubmit="return contactSubmit(contactForm)" method="POST">
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="text" name="nom" id="familyName" placeholder="Nom">
+
+                    </div>
+
+                    <div class="flexForm" style="float:left;">
+                        <input type="text" name="prenom" id="givenName" placeholder="Prénom">
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                    <div class="flexForm" style="float:left;margin-right:20px;">
+                        <input type="email" name="email" id="email" placeholder="Email">
+
+                    </div>
+
+                    <div class="flexForm" style="float:left;">
+                        <input type="tel" name="telephone" id="phone" placeholder="Téléphone">
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                    <div class="flexForm">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <br style="clear:both;" />
+                </section>
+
+                <section>
+                    <input type="submit" value="Envoyer" id="submit">
+                </section>
+                <section>
+                    <input type="reset" value="Réinitialiser">
+                </section>
+                <p class="obligatoire">Tous les champs marqués * sont obligatoires</p>
+            </form>
+            <button onclick="goToTop()" id="topButton" title="Aller en haut de page">&#10148;</button>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <script src="js/main.js"></script>
+        <p>© 2019 Mathieu François - Srinjoy Sanyal</p>
+        <button onclick="flocons()" title="Il neige">Let it snow</button>
+        
+    </footer>
+</body>
+
+</html>
